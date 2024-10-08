@@ -11,11 +11,13 @@ private Singleton() {
 }
 
 public static Singleton getInstance() {
-    if (instance == null) {
-        instance = new Singleton();
-        return instance;
-    }else {
-         return instance; 
+//     if (instance == null) {
+//        return instance = new Singleton();
+//     }
+//    return instance; 
+
+return instance == null ? instance = new Singleton() : instance;
+ 
  }
   
 }
@@ -23,4 +25,4 @@ public static Singleton getInstance() {
 
 
 
-}
+
